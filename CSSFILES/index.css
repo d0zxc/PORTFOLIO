@@ -606,3 +606,9 @@
     opacity: 1;
     transform: scale(1.2);
 }
+
+.project-card .swiper {
+    height: 300px; /* Set consistent height */
+}
+.project-card .content {
+        min-height: 200px;}
