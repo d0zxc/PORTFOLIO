@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jowell Andrei Noma Dayan | Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'twitter-black': '#15202B',
+                        'twitter-dark': '#192734',
+                        'twitter-border': '#38444d',
+                        'twitter-blue': '#1DA1F2',
+                        'twitter-text': '#FFFFFF',
+                        'twitter-light-text': '#8899A6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#15202B] text-[#FFFFFF]">
+    <!-- Navigation Bar - Twitter/X Inspired -->
+    <nav class="fixed w-full bg-[#15202B] border-b border-[#38444d] py-2 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo/Brand -->
+                <a href="#" class="text-[#1DA1F2] font-bold text-2xl">
+                    <i class="fas fa-code"></i>
+                </a>
+                
+                <!-- Nav Links - Desktop -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#home" class="text-[#FFFFFF] hover:text-[#1DA1F2] font-medium transition duration-300">Home</a>
+                    <a href="#about" class="text-[#8899A6] hover:text-[#1DA1F2] font-medium transition duration-300">About</a>
+                    <a href="#education" class="text-[#8899A6] hover:text-[#1DA1F2] font-medium transition duration-300">Education</a>
+                    <a href="#skills" class="text-[#8899A6] hover:text-[#1DA1F2] font-medium transition duration-300">Skills</a>
+                    <a href="#projects" class="text-[#8899A6] hover:text-[#1DA1F2] font-medium transition duration-300">Projects</a>
+                    <a href="#experience" class="text-[#8899A6] hover:text-[#1DA1F2] font-medium transition duration-300">Experience</a>
+                    <a href="#contact" class="bg-[#1DA1F2] hover:bg-[#1a91da] text-white font-bold py-2 px-6 rounded-full transition duration-300">Contact Me</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-[#FFFFFF] hover:text-[#1DA1F2]">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed w-full bg-[#15202B] border-b border-[#38444d] md:hidden z-40 hidden" style="top:60px;">
+        <div class="container mx-auto px-4 py-4">
+            <a href="#home" class="block py-3 text-[#FFFFFF] hover:text-[#1DA1F2] font-medium border-b border-[#38444d]">Home</a>
+            <a href="#about" class="block py-3 text-[#8899A6] hover:text-[#1DA1F2] font-medium border-b border-[#38444d]">About</a>
+            <a href="#education" class="block py-3 text-[#8899A6] hover:text-[#1DA1F2] font-medium border-b border-[#38444d]">Education</a>
+            <a href="#skills" class="block py-3 text-[#8899A6] hover:text-[#1DA1F2] font-medium border-b border-[#38444d]">Skills</a>
+            <a href="#projects" class="block py-3 text-[#8899A6] hover:text-[#1DA1F2] font-medium border-b border-[#38444d]">Projects</a>
+            <a href="#experience" class="block py-3 text-[#8899A6] hover:text-[#1DA1F2] font-medium border-b border-[#38444d]">Experience</a>
+            <a href="#contact" class="block py-3 text-[#1DA1F2] font-bold">Contact Me</a>
+        </div>
+    </div>
+
+    <!-- Main Content - Twitter/X Profile Style -->
+    <main class="pt-16">
+        <!-- Hero Section / Profile Header -->
+        <section id="home" class="bg-[#15202B] py-0">
+            <!-- Banner Image (Optional Twitter-style banner) -->
+            <div class="w-full h-40 md:h-60 bg-gradient-to-r from-[#192734] to-[#22303c] relative overflow-hidden">
+                <!-- Twitter-style pattern background -->
+                <div class="absolute inset-0 opacity-10">
+                    <div class="absolute transform -rotate-45" style="left: -50%; top: -50%; width: 200%; height: 200%;">
+                        <div class="absolute" style="left: 0; top: 0; right: 0; bottom: 0; background: repeating-linear-gradient(0deg, #1DA1F2, #1DA1F2 1px, transparent 1px, transparent 10px)"></div>
+                        <div class="absolute" style="left: 0; top: 0; right: 0; bottom: 0; background: repeating-linear-gradient(90deg, #1DA1F2, #1DA1F2 1px, transparent 1px, transparent 10px)"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Profile Container -->
+            <div class="container mx-auto px-4">
+                <div class="relative -mt-16 md:-mt-24 px-4">
+                    <!-- Profile Image -->
+                    <div class="profile-image-container inline-block relative">
+                        <img src="../assets/profile.JPG" alt="Jowell Andrei Noma Dayan" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-[#15202B] object-cover">
+                        <div class="absolute inset-0 rounded-full border-4 border-[#15202B] hover:border-[#1DA1F2] transition duration-300 cursor-pointer"></div>
+                    </div>
+                    
+                    <!-- Action Buttons (Twitter-style) -->
+                    <div class="flex justify-end mt-4 md:mt-0 md:absolute md:top-4 md:right-4 space-x-3">
+                        <button class="bg-transparent hover:bg-[#1DA1F2]/10 text-[#1DA1F2] border border-[#1DA1F2] rounded-full px-4 py-1.5 font-semibold transition duration-300">
+                            <i class="fas fa-bell"></i> <span class="ml-1">Follow</span>
+                        </button>
+                        <button class="bg-[#1DA1F2] hover:bg-[#1a91da] text-white rounded-full px-4 py-1.5 font-semibold transition duration-300">
+                            <i class="fas fa-envelope"></i> <span class="ml-1">Message</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Profile Info -->
+                    <div class="mt-4">
+                        <h1 class="text-[#FFFFFF] font-bold text-xl md:text-2xl">Jowell Andrei Noma Dayan</h1>
+                        <p class="text-[#8899A6] font-normal">@AndreiDayan</p>
+                        
+                        <p class="text-[#FFFFFF] mt-4">
+                            Computer Science Student & Web Developer. Passionate about technology and problem-solving.
+                        </p>
+                        
+                        <!-- Twitter-style metadata -->
+                        <div class="flex flex-wrap mt-3 text-[#8899A6]">
+                            <span class="mr-4 mb-2"><i class="fas fa-map-marker-alt mr-1"></i> Nagcarlan, Laguna, Philippines</span>
+                            <span class="mr-4 mb-2"><i class="fas fa-link mr-1"></i> <a href="https://www.linkedin.com/in/jowell-andrei-dayan-2b396436b" target="_blank"class="text-[#1DA1F2] hover:underline">Linkedin</a></span>
+                            <span class="mr-4 mb-2"><i class="fas fa-calendar-alt mr-1"></i> Joined June 2003</span>
+                        </div>
+                        
+                        <!-- Twitter-style follow stats -->
+                        <div class="flex mt-3 text-[#FFFFFF]">
+                            <a href="#" class="mr-4 hover:underline">
+                                <span class="font-bold">42</span> <span class="text-[#8899A6]">Following</span>
+                            </a>
+                            <a href="#" class="hover:underline">
+                                <span class="font-bold">128</span> <span class="text-[#8899A6]">Followers</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Twitter-style Tab Navigation -->
+                <div class="mt-6 border-b border-[#38444d]">
+                    <div class="flex flex-nowrap overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <a href="#posts" class="tab-active text-center px-6 py-3 font-medium whitespace-nowrap">
+                            Projects
+                        </a>
+                        <a href="#skills" class="text-[#8899A6] hover:text-[#FFFFFF] text-center px-6 py-3 font-medium border-b-4 border-transparent hover:border-[#1DA1F2] transition duration-300 whitespace-nowrap">
+                            Skills
+                        </a>
+                        <a href="#education" class="text-[#8899A6] hover:text-[#FFFFFF] text-center px-6 py-3 font-medium border-b-4 border-transparent hover:border-[#1DA1F2] transition duration-300 whitespace-nowrap">
+                            Education
+                        </a>
+                        <a href="#experience" class="text-[#8899A6] hover:text-[#FFFFFF] text-center px-6 py-3 font-medium border-b-4 border-transparent hover:border-[#1DA1F2] transition duration-300 whitespace-nowrap">
+                            Experience
+                        </a>
+                        <a href="#about" class="text-[#8899A6] hover:text-[#FFFFFF] text-center px-6 py-3 font-medium border-b-4 border-transparent hover:border-[#1DA1F2] transition duration-300 whitespace-nowrap">
+                            About
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- First "Tweet" - Project Highlight -->
+                <div class="py-4 border-b border-[#38444d]">
+                    <div class="flex">
+                        <!-- Avatar -->
+                        <div class="flex-shrink-0 mr-3">
+                            <img src="../assets/profile.JPG" alt="Jowell Andrei" class="w-12 h-12 rounded-full object-cover">
+                        </div>
+                        
+                        <!-- Tweet Content -->
+                        <div class="flex-1">
+                            <!-- Tweet Header -->
+                            <div class="flex items-center">
+                                <span class="font-bold text-[#FFFFFF] mr-1">Jowell Andrei Noma Dayan</span>
+                                <span class="text-[#8899A6] mr-1">@jawelldayan</span>
+                                <span class="text-[#8899A6]">· June 20</span>
+                                <i class="fas fa-ellipsis-h ml-auto text-[#8899A6]"></i>
+                            </div>
+                            
+                            <!-- Tweet Body -->
+                            <div class="mt-2">
+                                <p class="text-[#FFFFFF]">
+                                    Just completed my latest project: CPAce - An Adaptive Learning CPA Board Exam Review Application using Machine Learning algorithms! 🚀 #MachineLearning #Python #DataScience
+                                </p>
+                                
+                                <!-- Project Card (Twitter-style) -->
+                                <div class="mt-3 rounded-2xl border border-[#38444d] overflow-hidden">
+                                    <div class="bg-[#192734] h-40 flex items-center justify-center">
+                                        <i class="fas fa-laptop-code text-6xl text-[#1DA1F2]"></i>
+                                    </div>
+                                    <div class="p-3 bg-[#192734]">
+                                        <h3 class="text-[#FFFFFF] font-bold">CPAce: Adaptive Learning CPA Board Exam Review Application</h3>
+                                        <p class="text-[#8899A6] text-sm">Using Random Forest and Hybrid Method Algorithms</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tweet Actions -->
+                                <div class="flex justify-between mt-4 text-[#8899A6]">
+                                    <button class="flex items-center hover:text-[#1DA1F2] transition duration-300">
+                                        <i class="far fa-comment"></i>
+                                        <span class="ml-2">32</span>
+                                    </button>
+                                    <button class="flex items-center hover:text-[#17BF63] transition duration-300">
+                                        <i class="fas fa-retweet"></i>
+                                        <span class="ml-2">64</span>
+                                    </button>
+                                    <button class="flex items-center hover:text-[#E0245E] transition duration-300">
+                                        <i class="far fa-heart"></i>
+                                        <span class="ml-2">128</span>
+                                    </button>
+                                    <button class="flex items-center hover:text-[#1DA1F2] transition duration-300">
+                                        <i class="far fa-share-square"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

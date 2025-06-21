@@ -1,0 +1,118 @@
+/* Twitter/X-Inspired Theme */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    background-color: #15202B;
+    color: #FFFFFF;
+}
+
+/* Custom scrollbar - Hide on WebKit browsers */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Make the site scroll smoothly */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Twitter/X style active tab */
+.tab-active {
+    color: #FFFFFF;
+    font-weight: 500;
+    border-bottom: 4px solid #1DA1F2;
+}
+
+/* Twitter hover effects */
+button, a {
+    transition: all 0.2s ease;
+}
+
+/* Twitter card hover effect */
+.project-card {
+    transition: background-color 0.2s ease;
+}
+
+.project-card:hover {
+    background-color: #192734;
+}
+
+/* Twitter-style tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #192734;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #38444d;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Twitter blue verification badge */
+.verified-badge {
+    color: #1DA1F2;
+    margin-left: 2px;
+    font-size: 0.875em;
+}
+
+/* Profile image hover effect */
+.profile-image-container {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.profile-image-container:hover {
+    transform: scale(1.02);
+}
+
+/* Mobile menu animation */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#mobile-menu.show {
+    display: block;
+    animation: slideDown 0.2s forwards;
+}
+
+/* Twitter style loading spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 0.2rem solid rgba(29, 161, 242, 0.2);
+    border-top-color: #1DA1F2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .profile-image-container img {
+        width: 6rem;
+        height: 6rem;
+    }
+}
