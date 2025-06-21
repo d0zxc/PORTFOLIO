@@ -17,8 +17,18 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- AOS Library for Scroll Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <!-- Custom CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="../CSSFILES/index.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
     <!-- Tailwind Configuration -->
     <script>
@@ -44,23 +54,23 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center">
                 <!-- Logo/Brand -->
-                <a href="#" class="text-[#1DA1F2] font-bold text-2xl">
+                <a href="#" class="text-[#1DA1F2] font-bold text-2xl animate__animated animate__fadeIn">
                     <i class="fas fa-code"></i>
                 </a>
                 
                 <!-- Nav Links - Desktop -->
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="#home" class="text-[#FFFFFF] hover:text-[#1DA1F2] font-medium transition duration-300">Home</a>
-                    <a href="#about" class="text-[#8899A6] hover:text-[#1DA1F2] font-medium transition duration-300">About</a>
-                    <a href="#education" class="text-[#8899A6] hover:text-[#1DA1F2] font-medium transition duration-300">Education</a>
-                    <a href="#skills" class="text-[#8899A6] hover:text-[#1DA1F2] font-medium transition duration-300">Skills</a>
-                    <a href="#projects" class="text-[#8899A6] hover:text-[#1DA1F2] font-medium transition duration-300">Projects</a>
-                    <a href="#experience" class="text-[#8899A6] hover:text-[#1DA1F2] font-medium transition duration-300">Experience</a>
-                    <a href="#contact" class="bg-[#1DA1F2] hover:bg-[#1a91da] text-white font-bold py-2 px-6 rounded-full transition duration-300">Contact Me</a>
+                    <a href="#home" class="text-[#FFFFFF] hover:text-[#1DA1F2] font-medium transition duration-300 nav-item-animate animate__animated animate__fadeInDown" style="animation-delay: 0.1s;">Home</a>
+                    <a href="#about" class="text-[#8899A6] hover:text-[#1DA1F2] font-medium transition duration-300 nav-item-animate animate__animated animate__fadeInDown" style="animation-delay: 0.2s;">About</a>
+                    <a href="#education" class="text-[#8899A6] hover:text-[#1DA1F2] font-medium transition duration-300 nav-item-animate animate__animated animate__fadeInDown" style="animation-delay: 0.3s;">Education</a>
+                    <a href="#skills" class="text-[#8899A6] hover:text-[#1DA1F2] font-medium transition duration-300 nav-item-animate animate__animated animate__fadeInDown" style="animation-delay: 0.4s;">Skills</a>
+                    <a href="#projects" class="text-[#8899A6] hover:text-[#1DA1F2] font-medium transition duration-300 nav-item-animate animate__animated animate__fadeInDown" style="animation-delay: 0.5s;">Projects</a>
+                    <a href="#experience" class="text-[#8899A6] hover:text-[#1DA1F2] font-medium transition duration-300 nav-item-animate animate__animated animate__fadeInDown" style="animation-delay: 0.6s;">Experience</a>
+                    <a href="#contact" class="bg-[#1DA1F2] hover:bg-[#1a91da] text-white font-bold py-2 px-6 rounded-full transition duration-300 button-animate animate__animated animate__fadeInDown" style="animation-delay: 0.7s;">Contact Me</a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden">
+                <div class="md:hidden animate__animated animate__fadeIn">
                     <button id="mobile-menu-button" class="text-[#FFFFFF] hover:text-[#1DA1F2]">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
@@ -87,9 +97,9 @@
         <!-- Hero Section / Profile Header -->
         <section id="home" class="bg-[#15202B] py-0">
             <!-- Banner Image (Optional Twitter-style banner) -->
-            <div class="w-full h-40 md:h-60 bg-gradient-to-r from-[#192734] to-[#22303c] relative overflow-hidden">
+            <div class="w-full h-40 md:h-60 bg-gradient-to-r from-[#192734] to-[#22303c] relative overflow-hidden animate__animated animate__fadeIn">
                 <!-- Twitter-style pattern background -->
-                <div class="absolute inset-0 opacity-10">
+                <div class="absolute inset-0 opacity-10 banner-pattern-animate">
                     <div class="absolute transform -rotate-45" style="left: -50%; top: -50%; width: 200%; height: 200%;">
                         <div class="absolute" style="left: 0; top: 0; right: 0; bottom: 0; background: repeating-linear-gradient(0deg, #1DA1F2, #1DA1F2 1px, transparent 1px, transparent 10px)"></div>
                         <div class="absolute" style="left: 0; top: 0; right: 0; bottom: 0; background: repeating-linear-gradient(90deg, #1DA1F2, #1DA1F2 1px, transparent 1px, transparent 10px)"></div>
@@ -101,121 +111,518 @@
             <div class="container mx-auto px-4">
                 <div class="relative -mt-16 md:-mt-24 px-4">
                     <!-- Profile Image -->
-                    <div class="profile-image-container inline-block relative">
-                        <img src="../assets/profile.JPG" alt="Jowell Andrei Noma Dayan" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-[#15202B] object-cover">
+                    <div class="profile-image-container inline-block relative animate__animated animate__zoomIn">
+                        <img src="../Assets/profile.JPG" alt="Jowell Andrei Noma Dayan" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-[#15202B] object-cover">
                         <div class="absolute inset-0 rounded-full border-4 border-[#15202B] hover:border-[#1DA1F2] transition duration-300 cursor-pointer"></div>
                     </div>
                     
                     <!-- Action Buttons (Twitter-style) -->
-                    <div class="flex justify-end mt-4 md:mt-0 md:absolute md:top-4 md:right-4 space-x-3">
-                        <button class="bg-transparent hover:bg-[#1DA1F2]/10 text-[#1DA1F2] border border-[#1DA1F2] rounded-full px-4 py-1.5 font-semibold transition duration-300">
+                    <div class="flex justify-end mt-4 md:mt-0 md:absolute md:top-4 md:right-4 space-x-3 animate__animated animate__fadeInRight" style="animation-delay: 0.3s;">
+                        <button class="bg-transparent hover:bg-[#1DA1F2]/10 text-[#1DA1F2] border border-[#1DA1F2] rounded-full px-4 py-1.5 font-semibold transition duration-300 button-animate">
                             <i class="fas fa-bell"></i> <span class="ml-1">Follow</span>
                         </button>
-                        <button class="bg-[#1DA1F2] hover:bg-[#1a91da] text-white rounded-full px-4 py-1.5 font-semibold transition duration-300">
+                        <button class="bg-[#1DA1F2] hover:bg-[#1a91da] text-white rounded-full px-4 py-1.5 font-semibold transition duration-300 button-animate">
                             <i class="fas fa-envelope"></i> <span class="ml-1">Message</span>
                         </button>
                     </div>
                     
                     <!-- Profile Info -->
-                    <div class="mt-4">
-                        <h1 class="text-[#FFFFFF] font-bold text-xl md:text-2xl">Jowell Andrei Noma Dayan</h1>
-                        <p class="text-[#8899A6] font-normal">@AndreiDayan</p>
+                    <div class="mt-4 profile-info-animate">
+                        <h1 class="text-[#FFFFFF] font-bold text-xl md:text-2xl animate__animated animate__fadeIn" style="animation-delay: 0.4s;">Jowell Andrei Noma Dayan</h1>
+                        <p class="text-[#8899A6] font-normal animate__animated animate__fadeIn" style="animation-delay: 0.5s;">@AndreiDayan</p>
                         
-                        <p class="text-[#FFFFFF] mt-4">
-                            Computer Science Student & Web Developer. Passionate about technology and problem-solving.
+                        <p id="bio-text" class="text-[#FFFFFF] mt-4 animate__animated animate__fadeIn" style="animation-delay: 0.6s;">
+                            I am a 22-year-old fourth-year Computer Science student at Colegio de San Juan de Letran Calamba, passionate about technology and problem-solving.
                         </p>
                         
                         <!-- Twitter-style metadata -->
-                        <div class="flex flex-wrap mt-3 text-[#8899A6]">
-                            <span class="mr-4 mb-2"><i class="fas fa-map-marker-alt mr-1"></i> Nagcarlan, Laguna, Philippines</span>
-                            <span class="mr-4 mb-2"><i class="fas fa-link mr-1"></i> <a href="https://www.linkedin.com/in/jowell-andrei-dayan-2b396436b" target="_blank"class="text-[#1DA1F2] hover:underline">Linkedin</a></span>
-                            <span class="mr-4 mb-2"><i class="fas fa-calendar-alt mr-1"></i> Joined June 2003</span>
+                        <div class="flex flex-wrap mt-3 text-[#8899A6] animate__animated animate__fadeIn" style="animation-delay: 0.7s;">
+                            <span class="mr-4 mb-2 stagger-animate"><i class="fas fa-map-marker-alt mr-1"></i> Nagcarlan, Laguna, Philippines</span>
+                            <span class="mr-4 mb-2 stagger-animate"><i class="fas fa-envelope mr-1"></i> <a href="mailto:dayanandrei14@gmail.com" class="text-[#1DA1F2] hover:underline">dayanandrei14@gmail.com</a></span>
+                            <span class="mr-4 mb-2 stagger-animate"><i class="fas fa-phone mr-1"></i> <a href="tel:09763657046" class="text-[#1DA1F2] hover:underline">09763657049</a></span>
                         </div>
                         
                         <!-- Twitter-style follow stats -->
-                        <div class="flex mt-3 text-[#FFFFFF]">
-                            <a href="#" class="mr-4 hover:underline">
-                                <span class="font-bold">42</span> <span class="text-[#8899A6]">Following</span>
+                        <div class="flex mt-3 text-[#FFFFFF] animate__animated animate__fadeIn" style="animation-delay: 0.8s;">
+                            <a href="#skills" class="mr-4 hover:underline">
+                                <span class="font-bold animate-number" data-final-value="10">0</span> <span class="text-[#8899A6]">Skills</span>
                             </a>
-                            <a href="#" class="hover:underline">
-                                <span class="font-bold">128</span> <span class="text-[#8899A6]">Followers</span>
+                            <a href="#projects" class="hover:underline mr-4">
+                                <span class="font-bold animate-number" data-final-value="2">0</span> <span class="text-[#8899A6]">Projects</span>
+                            </a>
+                            <a href="#experience" class="hover:underline">
+                                <span class="font-bold animate-number" data-final-value="2">0</span> <span class="text-[#8899A6]">Experiences</span>
                             </a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Twitter-style Tab Navigation -->
-                <div class="mt-6 border-b border-[#38444d]">
+                <div class="mt-6 border-b border-[#38444d] animate__animated animate__fadeIn" style="animation-delay: 0.9s;">
                     <div class="flex flex-nowrap overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
-                        <a href="#posts" class="tab-active text-center px-6 py-3 font-medium whitespace-nowrap">
-                            Projects
+                        <a href="#about" class="tab-active text-center px-6 py-3 font-medium whitespace-nowrap nav-item-animate">
+                            About
                         </a>
-                        <a href="#skills" class="text-[#8899A6] hover:text-[#FFFFFF] text-center px-6 py-3 font-medium border-b-4 border-transparent hover:border-[#1DA1F2] transition duration-300 whitespace-nowrap">
+                        <a href="#skills" class="text-[#8899A6] hover:text-[#FFFFFF] text-center px-6 py-3 font-medium border-b-4 border-transparent hover:border-[#1DA1F2] transition duration-300 whitespace-nowrap nav-item-animate">
                             Skills
                         </a>
-                        <a href="#education" class="text-[#8899A6] hover:text-[#FFFFFF] text-center px-6 py-3 font-medium border-b-4 border-transparent hover:border-[#1DA1F2] transition duration-300 whitespace-nowrap">
+                        <a href="#education" class="text-[#8899A6] hover:text-[#FFFFFF] text-center px-6 py-3 font-medium border-b-4 border-transparent hover:border-[#1DA1F2] transition duration-300 whitespace-nowrap nav-item-animate">
                             Education
                         </a>
-                        <a href="#experience" class="text-[#8899A6] hover:text-[#FFFFFF] text-center px-6 py-3 font-medium border-b-4 border-transparent hover:border-[#1DA1F2] transition duration-300 whitespace-nowrap">
+                        <a href="#projects" class="text-[#8899A6] hover:text-[#FFFFFF] text-center px-6 py-3 font-medium border-b-4 border-transparent hover:border-[#1DA1F2] transition duration-300 whitespace-nowrap nav-item-animate">
+                            Projects
+                        </a>
+                        <a href="#experience" class="text-[#8899A6] hover:text-[#FFFFFF] text-center px-6 py-3 font-medium border-b-4 border-transparent hover:border-[#1DA1F2] transition duration-300 whitespace-nowrap nav-item-animate">
                             Experience
                         </a>
-                        <a href="#about" class="text-[#8899A6] hover:text-[#FFFFFF] text-center px-6 py-3 font-medium border-b-4 border-transparent hover:border-[#1DA1F2] transition duration-300 whitespace-nowrap">
-                            About
+                        <a href="#certificates" class="text-[#8899A6] hover:text-[#FFFFFF] text-center px-6 py-3 font-medium border-b-4 border-transparent hover:border-[#1DA1F2] transition duration-300 whitespace-nowrap nav-item-animate">
+                            Certificates
                         </a>
                     </div>
                 </div>
-                
-                <!-- First "Tweet" - Project Highlight -->
-                <div class="py-4 border-b border-[#38444d]">
-                    <div class="flex">
-                        <!-- Avatar -->
-                        <div class="flex-shrink-0 mr-3">
-                            <img src="../assets/profile.JPG" alt="Jowell Andrei" class="w-12 h-12 rounded-full object-cover">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-12 bg-[#15202B]">
+            <div class="container mx-auto px-4">
+                <div class="tweet-card mb-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-[#192734] rounded-xl p-5 border border-[#38444d] hover:border-[#1DA1F2] transition duration-300">
+                        <h2 class="text-[#FFFFFF] text-2xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-user-circle text-[#1DA1F2] mr-3"></i>About Me
+                        </h2>
+                        <p class="text-[#FFFFFF] leading-relaxed typing-animation">
+                            I am a 22-year-old fourth-year Computer Science student at Colegio de San Juan de Letran Calamba, passionate about technology and problem-solving. Eager to apply my skills in programming, web development, and data analysis, I am dedicated to continuous learning and growth. With a strong foundation in computer science, I aspire to contribute to innovative projects that create meaningful impact.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tweet-card mb-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-[#192734] rounded-xl p-5 border border-[#38444d] hover:border-[#1DA1F2] transition duration-300">
+                        <h3 class="text-[#FFFFFF] text-xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-language text-[#1DA1F2] mr-3"></i>Languages
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-[#FFFFFF]">English</span>
+                                    <span class="text-[#8899A6]">Fluent</span>
+                                </div>
+                                <div class="h-2 bg-[#38444d] rounded-full overflow-hidden">
+                                    <div class="progress-bar bg-[#1DA1F2] h-full rounded-full" style="width: 0%;" data-aos="width" data-aos-delay="300" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-[#FFFFFF]">Filipino</span>
+                                    <span class="text-[#8899A6]">Native</span>
+                                </div>
+                                <div class="h-2 bg-[#38444d] rounded-full overflow-hidden">
+                                    <div class="progress-bar bg-[#1DA1F2] h-full rounded-full" style="width: 0%;" data-aos="width" data-aos-delay="400" data-width="100%"></div>
+                                </div>
+                            </div>
                         </div>
-                        
-                        <!-- Tweet Content -->
-                        <div class="flex-1">
-                            <!-- Tweet Header -->
-                            <div class="flex items-center">
-                                <span class="font-bold text-[#FFFFFF] mr-1">Jowell Andrei Noma Dayan</span>
-                                <span class="text-[#8899A6] mr-1">@jawelldayan</span>
-                                <span class="text-[#8899A6]">· June 20</span>
-                                <i class="fas fa-ellipsis-h ml-auto text-[#8899A6]"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-12 bg-[#192734]">
+            <div class="container mx-auto px-4">
+                <h2 class="text-[#FFFFFF] text-2xl font-bold mb-8 flex items-center" data-aos="fade-right">
+                    <i class="fas fa-code text-[#1DA1F2] mr-3"></i>Skills
+                </h2>
+
+                <!-- Technical Skills -->
+                <div class="mb-12" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-[#FFFFFF] text-xl font-bold mb-6 border-l-4 border-[#1DA1F2] pl-4">Technical Skills</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Programming Skill Card -->
+                        <div class="skill-card bg-[#15202B] rounded-xl p-5 border border-[#38444d] hover:border-[#1DA1F2] transition duration-300" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-laptop-code text-[#1DA1F2] text-2xl mr-3"></i>
+                                <h4 class="text-[#FFFFFF] text-lg font-bold">Programming</h4>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-badge">PHP</span>
+                                <span class="skill-badge">HTML</span>
+                                <span class="skill-badge">Python</span>
+                                <span class="skill-badge">JavaScript</span>
+                                <span class="skill-badge">CSS3</span>
+                            </div>
+                            <div class="h-2 bg-[#38444d] rounded-full overflow-hidden">
+                                <div class="progress-bar bg-[#1DA1F2] h-full rounded-full" style="width: 0%;" data-aos="width" data-aos-delay="200" data-width="85%"></div>
+                            </div>
+                            <div class="text-right text-[#8899A6] text-sm mt-1">85%</div>
+                        </div>
+
+                        <!-- Web Development Skill Card -->
+                        <div class="skill-card bg-[#15202B] rounded-xl p-5 border border-[#38444d] hover:border-[#1DA1F2] transition duration-300" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-globe text-[#1DA1F2] text-2xl mr-3"></i>
+                                <h4 class="text-[#FFFFFF] text-lg font-bold">Web Development</h4>
+                            </div>
+                            <p class="text-[#8899A6] mb-4">Front-end and back-end development for websites and web applications.</p>
+                            <div class="h-2 bg-[#38444d] rounded-full overflow-hidden">
+                                <div class="progress-bar bg-[#1DA1F2] h-full rounded-full" style="width: 0%;" data-aos="width" data-aos-delay="250" data-width="80%"></div>
+                            </div>
+                            <div class="text-right text-[#8899A6] text-sm mt-1">80%</div>
+                        </div>
+
+                        <!-- UI Design Skill Card -->
+                        <div class="skill-card bg-[#15202B] rounded-xl p-5 border border-[#38444d] hover:border-[#1DA1F2] transition duration-300" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-paint-brush text-[#1DA1F2] text-2xl mr-3"></i>
+                                <h4 class="text-[#FFFFFF] text-lg font-bold">UI Design</h4>
+                            </div>
+                            <p class="text-[#8899A6] mb-4">Creating user-friendly interfaces with modern design principles.</p>
+                            <div class="h-2 bg-[#38444d] rounded-full overflow-hidden">
+                                <div class="progress-bar bg-[#1DA1F2] h-full rounded-full" style="width: 0%;" data-aos="width" data-aos-delay="300" data-width="75%"></div>
+                            </div>
+                            <div class="text-right text-[#8899A6] text-sm mt-1">75%</div>
+                        </div>
+
+                        <!-- Video Editing Skill Card -->
+                        <div class="skill-card bg-[#15202B] rounded-xl p-5 border border-[#38444d] hover:border-[#1DA1F2] transition duration-300" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-video text-[#1DA1F2] text-2xl mr-3"></i>
+                                <h4 class="text-[#FFFFFF] text-lg font-bold">Video Editing</h4>
+                            </div>
+                            <p class="text-[#8899A6] mb-4">Creating and editing video content for various platforms.</p>
+                            <div class="h-2 bg-[#38444d] rounded-full overflow-hidden">
+                                <div class="progress-bar bg-[#1DA1F2] h-full rounded-full" style="width: 0%;" data-aos="width" data-aos-delay="350" data-width="70%"></div>
+                            </div>
+                            <div class="text-right text-[#8899A6] text-sm mt-1">70%</div>
+                        </div>
+
+                        <!-- Data Analysis Skill Card -->
+                        <div class="skill-card bg-[#15202B] rounded-xl p-5 border border-[#38444d] hover:border-[#1DA1F2] transition duration-300" data-aos="zoom-in" data-aos-delay="350">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-chart-bar text-[#1DA1F2] text-2xl mr-3"></i>
+                                <h4 class="text-[#FFFFFF] text-lg font-bold">Data Analysis</h4>
+                            </div>
+                            <p class="text-[#8899A6] mb-4">Analyzing and interpreting complex data sets to derive valuable insights.</p>
+                            <div class="h-2 bg-[#38444d] rounded-full overflow-hidden">
+                                <div class="progress-bar bg-[#1DA1F2] h-full rounded-full" style="width: 0%;" data-aos="width" data-aos-delay="400" data-width="80%"></div>
+                            </div>
+                            <div class="text-right text-[#8899A6] text-sm mt-1">80%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organizational Skills -->
+                <div data-aos="fade-up" data-aos-delay="150">
+                    <h3 class="text-[#FFFFFF] text-xl font-bold mb-6 border-l-4 border-[#1DA1F2] pl-4">Organizational Skills</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Teamwork -->
+                        <div class="org-skill-card bg-[#15202B] rounded-xl p-5 border border-[#38444d] hover:shadow-lg hover:border-[#1DA1F2] transition-all duration-300" data-aos="flip-up" data-aos-delay="200">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2]">
+                                    <i class="fas fa-users text-2xl"></i>
+                                </div>
+                                <h4 class="text-[#FFFFFF] text-lg font-bold ml-3">Teamwork</h4>
+                            </div>
+                            <p class="text-[#8899A6]">Collaborate effectively with team members to achieve common goals and deliver quality results.</p>
+                        </div>
+
+                        <!-- Time Management -->
+                        <div class="org-skill-card bg-[#15202B] rounded-xl p-5 border border-[#38444d] hover:shadow-lg hover:border-[#1DA1F2] transition-all duration-300" data-aos="flip-up" data-aos-delay="250">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2]">
+                                    <i class="fas fa-clock text-2xl"></i>
+                                </div>
+                                <h4 class="text-[#FFFFFF] text-lg font-bold ml-3">Time Management</h4>
+                            </div>
+                            <p class="text-[#8899A6]">Efficiently organize and prioritize tasks to meet project deadlines and optimize productivity.</p>
+                        </div>
+
+                        <!-- Project Coordination -->
+                        <div class="org-skill-card bg-[#15202B] rounded-xl p-5 border border-[#38444d] hover:shadow-lg hover:border-[#1DA1F2] transition-all duration-300" data-aos="flip-up" data-aos-delay="300">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2]">
+                                    <i class="fas fa-tasks text-2xl"></i>
+                                </div>
+                                <h4 class="text-[#FFFFFF] text-lg font-bold ml-3">Project Coordination</h4>
+                            </div>
+                            <p class="text-[#8899A6]">Plan, execute, and oversee projects from initiation to completion, ensuring all objectives are met.</p>
+                        </div>
+
+                        <!-- Communication -->
+                        <div class="org-skill-card bg-[#15202B] rounded-xl p-5 border border-[#38444d] hover:shadow-lg hover:border-[#1DA1F2] transition-all duration-300" data-aos="flip-up" data-aos-delay="350">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2]">
+                                    <i class="fas fa-comments text-2xl"></i>
+                                </div>
+                                <h4 class="text-[#FFFFFF] text-lg font-bold ml-3">Communication</h4>
+                            </div>
+                            <p class="text-[#8899A6]">Express ideas clearly and effectively, both verbally and in writing, to ensure smooth collaboration.</p>
+                        </div>
+
+                        <!-- Adaptability -->
+                        <div class="org-skill-card bg-[#15202B] rounded-xl p-5 border border-[#38444d] hover:shadow-lg hover:border-[#1DA1F2] transition-all duration-300" data-aos="flip-up" data-aos-delay="400">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2]">
+                                    <i class="fas fa-sync-alt text-2xl"></i>
+                                </div>
+                                <h4 class="text-[#FFFFFF] text-lg font-bold ml-3">Adaptability</h4>
+                            </div>
+                            <p class="text-[#8899A6]">Quickly adjust to new situations, technologies, and requirements in a fast-paced environment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-12 bg-[#15202B]">
+            <div class="container mx-auto px-4">
+                <h2 class="text-[#FFFFFF] text-2xl font-bold mb-8 flex items-center" data-aos="fade-right">
+                    <i class="fas fa-graduation-cap text-[#1DA1F2] mr-3"></i>Education
+                </h2>
+
+                <div class="timeline relative">
+                    <!-- Timeline Line -->
+                    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#38444d]"></div>
+                    
+                    <!-- College Education -->
+                    <div class="timeline-item mb-12" data-aos="fade-right" data-aos-delay="100">
+                        <div class="md:flex items-center">
+                            <!-- Timeline Dot for Desktop -->
+                            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-[#1DA1F2] border-4 border-[#15202B]"></div>
+                            
+                            <!-- Left Side (Date) - Desktop -->
+                            <div class="hidden md:block md:w-1/2 pr-12 text-right">
+                                <span class="inline-block py-1 px-4 rounded-full bg-[#1DA1F2]/10 text-[#1DA1F2] font-semibold">2021 - Present</span>
+                                <p class="text-[#8899A6] mt-2">Expected graduation: July 4, 2025</p>
                             </div>
                             
-                            <!-- Tweet Body -->
-                            <div class="mt-2">
-                                <p class="text-[#FFFFFF]">
-                                    Just completed my latest project: CPAce - An Adaptive Learning CPA Board Exam Review Application using Machine Learning algorithms! 🚀 #MachineLearning #Python #DataScience
-                                </p>
-                                
-                                <!-- Project Card (Twitter-style) -->
-                                <div class="mt-3 rounded-2xl border border-[#38444d] overflow-hidden">
-                                    <div class="bg-[#192734] h-40 flex items-center justify-center">
-                                        <i class="fas fa-laptop-code text-6xl text-[#1DA1F2]"></i>
-                                    </div>
-                                    <div class="p-3 bg-[#192734]">
-                                        <h3 class="text-[#FFFFFF] font-bold">CPAce: Adaptive Learning CPA Board Exam Review Application</h3>
-                                        <p class="text-[#8899A6] text-sm">Using Random Forest and Hybrid Method Algorithms</p>
-                                    </div>
+                            <!-- Right Side (Content) -->
+                            <div class="md:w-1/2 md:pl-12">
+                                <!-- Mobile Date Display -->
+                                <div class="md:hidden mb-2">
+                                    <span class="inline-block py-1 px-4 rounded-full bg-[#1DA1F2]/10 text-[#1DA1F2] font-semibold">2021 - Present</span>
+                                    <p class="text-[#8899A6] mt-1">Expected graduation: July 4, 2025</p>
                                 </div>
                                 
-                                <!-- Tweet Actions -->
-                                <div class="flex justify-between mt-4 text-[#8899A6]">
-                                    <button class="flex items-center hover:text-[#1DA1F2] transition duration-300">
-                                        <i class="far fa-comment"></i>
-                                        <span class="ml-2">32</span>
+                                <!-- Education Card -->
+                                <div class="education-card bg-[#192734] rounded-xl p-5 border border-[#38444d] hover:border-[#1DA1F2] transition duration-300 animate__animated animate__fadeInRight" style="animation-delay: 0.5s;">
+                                    <h3 class="text-[#FFFFFF] text-xl font-bold mb-1">Bachelor of Science in Computer Science</h3>
+                                    <h4 class="text-[#8899A6] text-lg mb-4">Colegio de San Juan de Letran - Calamba</h4>
+                                    <p class="text-[#FFFFFF]">Pursuing a comprehensive education in computer science with focus on programming, web development, and data analysis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Senior High School Education -->
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                        <div class="md:flex items-center">
+                            <!-- Timeline Dot for Desktop -->
+                            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-[#1DA1F2] border-4 border-[#15202B]"></div>
+                            
+                            <!-- Left Side (Content) for Desktop -->
+                            <div class="md:w-1/2 pr-12 text-right">
+                                <!-- Education Card for Desktop -->
+                                <div class="hidden md:block education-card bg-[#192734] rounded-xl p-5 border border-[#38444d] hover:border-[#1DA1F2] transition duration-300 animate__animated animate__fadeInLeft" style="animation-delay: 0.5s;">
+                                    <h3 class="text-[#FFFFFF] text-xl font-bold mb-1">Science, Technology, Engineering, and Mathematics</h3>
+                                    <h4 class="text-[#8899A6] text-lg mb-4">STI College - Sta. Cruz</h4>
+                                    <p class="text-[#FFFFFF]">Completed STEM track with focus on mathematics and sciences to build a strong foundation for technological studies.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Right Side (Date) for Desktop -->
+                            <div class="hidden md:block md:w-1/2 pl-12">
+                                <span class="inline-block py-1 px-4 rounded-full bg-[#1DA1F2]/10 text-[#1DA1F2] font-semibold">Senior High School</span>
+                            </div>
+                            
+                            <!-- Mobile Layout -->
+                            <div class="md:hidden w-full">
+                                <div class="mb-2">
+                                    <span class="inline-block py-1 px-4 rounded-full bg-[#1DA1F2]/10 text-[#1DA1F2] font-semibold">Senior High School</span>
+                                </div>
+                                
+                                <div class="education-card bg-[#192734] rounded-xl p-5 border border-[#38444d] hover:border-[#1DA1F2] transition duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
+                                    <h3 class="text-[#FFFFFF] text-xl font-bold mb-1">Science, Technology, Engineering, and Mathematics</h3>
+                                    <h4 class="text-[#8899A6] text-lg mb-4">STI College - Sta. Cruz</h4>
+                                    <p class="text-[#FFFFFF]">Completed STEM track with focus on mathematics and sciences to build a strong foundation for technological studies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-12 bg-[#192734]">
+            <div class="container mx-auto px-4">
+                <h2 class="text-[#FFFFFF] text-2xl font-bold mb-8 flex items-center" data-aos="fade-right">
+                    <i class="fas fa-project-diagram text-[#1DA1F2] mr-3"></i>Projects
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="project-card tweet-animate h-full" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-[#15202B] rounded-xl overflow-hidden border border-[#38444d] hover:border-[#1DA1F2] transition duration-300 h-full flex flex-col">
+                            <!-- Project Header -->
+                            <div class="p-5 flex shrink-0">
+                                <img src="../Assets/profile.JPG" alt="Jowell Andrei Noma Dayan" class="w-12 h-12 rounded-full object-cover">
+                                <div class="ml-3">
+                                    <div class="flex items-center">
+                                        <span class="font-bold text-[#FFFFFF]">Jowell Andrei Noma Dayan</span>
+                                        <span class="text-[#8899A6] mx-1">@AndreiDayan</span>
+                                        <span class="text-[#8899A6]">· June 2023</span>
+                                    </div>
+                                    <p class="text-[#FFFFFF] mt-2">
+                                        Just completed our Thesis Capstone: CPAce - An Adaptive Learning CPA Board Exam Review Application using ML algorithms! 🚀 #MachineLearning #Python #DataScience
+                                    </p>
+                                </div>
+                            </div>
+                            
+                           <!-- Project Image/Icon -->
+                           <div class="bg-[#192734] h-80 overflow-hidden shrink-0">
+                                    <div class="swiper projectSwiper1 h-full">
+                                        <div class="swiper-wrapper">
+                                            <!-- 6 pictures for each project -->
+                                            <div class="swiper-slide">
+                                                <img src="../Assets/Picture1.png" alt="CPAce Dashboard" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="../Assets/Picture2.png" alt="CPAce Learning Module" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="../Assets/Picture3.png" alt="CPAce Progress Tracking" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="../Assets/Picture4.png" alt="CPAce Analytics" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="../Assets/Picture5.png" alt="CPAce Question Bank" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="../Assets/Picture6.png" alt="CPAce Results" class="w-full h-full object-cover">
+                                            </div>
+                                        </div>
+                                        <!-- Add navigation arrows -->
+                                        <div class="swiper-button-next !text-[#1DA1F2] !w-8 !h-8 !right-4"></div>
+                                        <div class="swiper-button-prev !text-[#1DA1F2] !w-8 !h-8 !left-4"></div>
+                                        <!-- Pagination dots - Adjusted positioning -->
+                                        <div class="swiper-pagination !bottom-4"></div>
+                                    </div>
+                                </div>
+                            
+                            <!-- Project Details -->
+                            <div class="p-5 flex flex-col flex-grow">
+                                <h3 class="text-[#FFFFFF] text-xl font-bold mb-2">CPAce: An Adaptive Learning CPA Board Exam Review Application</h3>
+                                <p class="text-[#8899A6] mb-4">Using Random Forest and Hybrid Method Algorithms for Colegio de San Juan de Letran Calamba</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-[#1DA1F2]/20 text-[#1DA1F2] text-xs px-3 py-1 rounded-full">Machine Learning</span>
+                                    <span class="bg-[#1DA1F2]/20 text-[#1DA1F2] text-xs px-3 py-1 rounded-full">Python</span>
+                                    <span class="bg-[#1DA1F2]/20 text-[#1DA1F2] text-xs px-3 py-1 rounded-full">Data Science</span>
+                                </div>
+                                
+                                <!-- Project Actions -->
+                                <div class="flex items-center justify-between text-[#8899A6] mt-4">
+                                    <button class="flex items-center space-x-3 hover:text-[#1DA1F2] transition duration-300 tweet-action-animate">
+                                        <i class="far fa-comment text-lg"></i>
+                                        <span class="text-sm">32</span>
                                     </button>
-                                    <button class="flex items-center hover:text-[#17BF63] transition duration-300">
-                                        <i class="fas fa-retweet"></i>
-                                        <span class="ml-2">64</span>
+                                    <button class="flex items-center space-x-3 hover:text-[#17BF63] transition duration-300 tweet-action-animate">
+                                        <i class="fas fa-retweet text-lg"></i>
+                                        <span class="text-sm">64</span>
                                     </button>
-                                    <button class="flex items-center hover:text-[#E0245E] transition duration-300">
-                                        <i class="far fa-heart"></i>
-                                        <span class="ml-2">128</span>
+                                    <button class="flex items-center space-x-3 hover:text-[#E0245E] transition duration-300 heart-btn tweet-action-animate">
+                                        <i class="far fa-heart text-lg"></i>
+                                        <span class="text-sm">128</span>
                                     </button>
-                                    <button class="flex items-center hover:text-[#1DA1F2] transition duration-300">
-                                        <i class="far fa-share-square"></i>
+                                    <button class="flex items-center space-x-3 hover:text-[#1DA1F2] transition duration-300 tweet-action-animate">
+                                        <i class="far fa-share-square text-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card tweet-animate h-full" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-[#15202B] rounded-xl overflow-hidden border border-[#38444d] hover:border-[#1DA1F2] transition duration-300 h-full flex flex-col">
+                            <!-- Project Header -->
+                            <div class="p-5 flex shrink-0">
+                                <img src="../Assets/profile.JPG" alt="Jowell Andrei Noma Dayan" class="w-12 h-12 rounded-full object-cover">
+                                <div class="ml-3">
+                                    <div class="flex items-center">
+                                        <span class="font-bold text-[#FFFFFF]">Jowell Andrei Noma Dayan</span>
+                                        <span class="text-[#8899A6] mx-1">@AndreiDayan</span>
+                                        <span class="text-[#8899A6]">· March 2024</span>
+                                    </div>
+                                    <p class="text-[#FFFFFF] mt-2">
+                                        Excited to share my work on the Department of Education website for Santa Rosa City's School Governance division! 💻 #WebDevelopment #Education 
+                                    </p>
+                                </div>
+                            </div>
+                            
+                           <!-- Project Image/Icon -->
+                           <div class="bg-[#192734] h-80 overflow-hidden shrink-0">
+                            <div class="swiper projectSwiper2 h-full">
+                                <div class="swiper-wrapper">
+                                    <!-- 6 pictures for each project -->
+                                    <div class="swiper-slide">
+                                        <img src="../Assets/sdo1.png" alt="CPAce Dashboard" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Assets/sdo2.png" alt="CPAce Learning Module" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Assets/sdo3.png" alt="CPAce Progress Tracking" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Assets/sdo4.png" alt="CPAce Analytics" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Assets/sdo5.png" alt="CPAce Question Bank" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../Assets/sdo6.png" alt="CPAce Results" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                                <!-- Add navigation arrows -->
+                                <div class="swiper-button-next !text-[#1DA1F2] !w-8 !h-8 !right-4"></div>
+                                <div class="swiper-button-prev !text-[#1DA1F2] !w-8 !h-8 !left-4"></div>
+                                <!-- Pagination dots - Adjusted positioning -->
+                                <div class="swiper-pagination !bottom-4"></div>
+                            </div>
+                        </div>
+                            
+                            <!-- Project Details -->
+                            <div class="p-5 flex flex-col flex-grow">
+                                <h3 class="text-[#FFFFFF] text-xl font-bold mb-2">Department of Education - Schools Division Office of Santa Rosa City</h3>
+                                <p class="text-[#8899A6] mb-4">School Governance and Operations Division Official Website for  </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-[#1DA1F2]/20 text-[#1DA1F2] text-xs px-3 py-1 rounded-full">Web Development</span>
+                                    <span class="bg-[#1DA1F2]/20 text-[#1DA1F2] text-xs px-3 py-1 rounded-full">PHP</span>
+                                    <span class="bg-[#1DA1F2]/20 text-[#1DA1F2] text-xs px-3 py-1 rounded-full">JavaScript</span>
+                                </div>
+                                
+                                <!-- Project Actions -->
+                                                            
+                                <div class="flex items-center justify-between text-[#8899A6] mt-4">
+                                    <button class="flex items-center space-x-3 hover:text-[#1DA1F2] transition duration-300 tweet-action-animate">
+                                        <i class="far fa-comment text-lg"></i>
+                                        <span class="text-sm">32</span>
+                                    </button>
+                                    <button class="flex items-center space-x-3 hover:text-[#17BF63] transition duration-300 tweet-action-animate">
+                                        <i class="fas fa-retweet text-lg"></i>
+                                        <span class="text-sm">64</span>
+                                    </button>
+                                    <button class="flex items-center space-x-3 hover:text-[#E0245E] transition duration-300 heart-btn tweet-action-animate">
+                                        <i class="far fa-heart text-lg"></i>
+                                        <span class="text-sm">128</span>
+                                    </button>
+                                    <button class="flex items-center space-x-3 hover:text-[#1DA1F2] transition duration-300 tweet-action-animate">
+                                        <i class="far fa-share-square text-lg"></i>
                                     </button>
                                 </div>
                             </div>
@@ -224,9 +631,286 @@
                 </div>
             </div>
         </section>
-    </main>
 
-    <!-- Custom JS -->
-    <script src="assets/js/script.js"></script>
+        <!-- Experience Section -->
+        <section id="experience" class="py-12 bg-[#15202B]">
+            <div class="container mx-auto px-4">
+                <h2 class="text-[#FFFFFF] text-2xl font-bold mb-8 flex items-center" data-aos="fade-right">
+                    <i class="fas fa-briefcase text-[#1DA1F2] mr-3"></i>Experience
+                </h2>
+
+                <div class="timeline relative">
+                    <!-- Timeline Line -->
+                    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#38444d]"></div>
+                    
+                    <!-- Experience 1 -->
+                    <div class="timeline-item mb-12" data-aos="fade-right" data-aos-delay="100">
+                        <div class="md:flex items-center">
+                            <!-- Timeline Dot for Desktop -->
+                            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-[#1DA1F2] border-4 border-[#15202B]"></div>
+                            
+                            <!-- Left Side (Date) - Desktop -->
+                            <div class="hidden md:block md:w-1/2 pr-12 text-right">
+                                <span class="inline-block py-1 px-4 rounded-full bg-[#1DA1F2]/10 text-[#1DA1F2] font-semibold">March 2025 - June 2025</span>
+                            </div>
+                            
+                            <!-- Right Side (Content) -->
+                            <div class="md:w-1/2 md:pl-12">
+                                <!-- Mobile Date Display -->
+                                <div class="md:hidden mb-2">
+                                    <span class="inline-block py-1 px-4 rounded-full bg-[#1DA1F2]/10 text-[#1DA1F2] font-semibold">March 2025 - June 2025</span>
+                                </div>
+                                
+                                <!-- Experience Card -->
+                                <div class="experience-card bg-[#192734] rounded-xl p-5 border border-[#38444d] hover:border-[#1DA1F2] transition duration-300 animate__animated animate__fadeInRight" style="animation-delay: 0.5s;">
+                                    <h3 class="text-[#FFFFFF] text-xl font-bold mb-1">Web Developer Intern</h3>
+                                    <h4 class="text-[#8899A6] text-lg mb-4">Department of Education - Schools Division Office of Santa Rosa City</h4>
+                                    <p class="text-[#FFFFFF]">
+                                        Developed and maintained web applications for the Schools Division Office,
+                                        focusing on improving user experience and website performance.
+                                        Collaborated with the education team to implement digital solutions for school operations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience 2 -->
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                        <div class="md:flex items-center">
+                            <!-- Timeline Dot for Desktop -->
+                            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-[#1DA1F2] border-4 border-[#15202B]"></div>
+                            
+                            <!-- Left Side (Content) for Desktop -->
+                            <div class="md:w-1/2 pr-12 text-right">
+                                <!-- Experience Card for Desktop -->
+                                <div class="hidden md:block experience-card bg-[#192734] rounded-xl p-5 border border-[#38444d] hover:border-[#1DA1F2] transition duration-300 animate__animated animate__fadeInLeft" style="animation-delay: 0.5s;">
+                                    <h3 class="text-[#FFFFFF] text-xl font-bold mb-1">Accenture Philippines 200 hours SAP Abap Training</h3>
+                                    <p class="text-[#FFFFFF] mt-4">
+                                        Completed intensive training in SAP ABAP programming, gaining hands-on experience
+                                        with enterprise resource planning systems and business process integration.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Right Side (Date) for Desktop -->
+                            <div class="hidden md:block md:w-1/2 pl-12">
+                                <span class="inline-block py-1 px-4 rounded-full bg-[#1DA1F2]/10 text-[#1DA1F2] font-semibold">March 2025 - May 2025</span>
+                            </div>
+                            
+                            <!-- Mobile Layout -->
+                            <div class="md:hidden w-full">
+                                <div class="mb-2">
+                                    <span class="inline-block py-1 px-4 rounded-full bg-[#1DA1F2]/10 text-[#1DA1F2] font-semibold">March 2025 - May 2025</span>
+                                </div>
+                                
+                                <div class="experience-card bg-[#192734] rounded-xl p-5 border border-[#38444d] hover:border-[#1DA1F2] transition duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
+                                    <h3 class="text-[#FFFFFF] text-xl font-bold mb-1">Accenture Philippines 200 hours SAP Abap Training</h3>
+                                    <p class="text-[#FFFFFF] mt-4">
+                                        Completed intensive training in SAP ABAP programming, gaining hands-on experience
+                                        with enterprise resource planning systems and business process integration.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="py-12 bg-[#192734]">
+            <div class="container mx-auto px-4">
+                <h2 class="text-[#FFFFFF] text-2xl font-bold mb-8 flex items-center" data-aos="fade-right">
+                    <i class="fas fa-certificate text-[#1DA1F2] mr-3"></i>Certificates
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Certificate 1 -->
+                    <div class="certificate-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="bg-[#15202B] rounded-xl p-6 border border-[#38444d] hover:border-[#1DA1F2] hover:shadow-lg transition duration-300">
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2]">
+                                        <i class="fas fa-code text-2xl"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-[#FFFFFF] text-xl font-bold">Information Technology Specialist - Python</h3>
+                                        <p class="text-[#8899A6]">CertiPort</p>
+                                    </div>
+                                </div>
+                                <span class="bg-[#1DA1F2]/20 text-[#1DA1F2] py-1 px-4 rounded-full text-sm">2024 - Present</span>
+                            </div>
+                            <p class="text-[#FFFFFF]">Certified specialist in Python programming with expertise in data structures, algorithms, and application development.</p>
+                            <div class="mt-6 flex justify-end">
+                                <button class="flex items-center text-[#1DA1F2] hover:underline button-animate">
+                                    <span>View Certificate</span>
+                                    <i class="fas fa-external-link-alt ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 2 -->
+                    <div class="certificate-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="bg-[#15202B] rounded-xl p-6 border border-[#38444d] hover:border-[#1DA1F2] hover:shadow-lg transition duration-300">
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2]">
+                                        <i class="fas fa-cogs text-2xl"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-[#FFFFFF] text-xl font-bold">IT Specialist - Device Configuration and Management</h3>
+                                        <p class="text-[#8899A6]">CertiPort</p>
+                                    </div>
+                                </div>
+                                <span class="bg-[#1DA1F2]/20 text-[#1DA1F2] py-1 px-4 rounded-full text-sm">2025 - Present</span>
+                            </div>
+                            <p class="text-[#FFFFFF]">Certified in configuring and managing hardware devices, networks, and operating systems for optimal performance.</p>
+                            <div class="mt-6 flex justify-end">
+                                <button class="flex items-center text-[#1DA1F2] hover:underline button-animate">
+                                    <span>View Certificate</span>
+                                    <i class="fas fa-external-link-alt ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-12 bg-[#15202B]">
+            <div class="container mx-auto px-4">
+                <h2 class="text-[#FFFFFF] text-2xl font-bold mb-8 flex items-center" data-aos="fade-right">
+                    <i class="fas fa-envelope text-[#1DA1F2] mr-3"></i>Get In Touch
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Contact Form -->
+                    <div class="md:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-[#192734] rounded-xl p-6 border border-[#38444d]">
+                            <form id="contact-form">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                    <div>
+                                        <label for="name" class="block text-[#FFFFFF] mb-2">Name</label>
+                                        <input type="text" id="name" class="w-full bg-[#15202B] border border-[#38444d] rounded-lg px-4 py-3 text-[#FFFFFF] focus:outline-none focus:border-[#1DA1F2] transition duration-300" required>
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-[#FFFFFF] mb-2">Email</label>
+                                        <input type="email" id="email" class="w-full bg-[#15202B] border border-[#38444d] rounded-lg px-4 py-3 text-[#FFFFFF] focus:outline-none focus:border-[#1DA1F2] transition duration-300" required>
+                                    </div>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="subject" class="block text-[#FFFFFF] mb-2">Subject</label>
+                                    <input type="text" id="subject" class="w-full bg-[#15202B] border border-[#38444d] rounded-lg px-4 py-3 text-[#FFFFFF] focus:outline-none focus:border-[#1DA1F2] transition duration-300" required>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="message" class="block text-[#FFFFFF] mb-2">Message</label>
+                                    <textarea id="message" rows="5" class="w-full bg-[#15202B] border border-[#38444d] rounded-lg px-4 py-3 text-[#FFFFFF] focus:outline-none focus:border-[#1DA1F2] transition duration-300" required></textarea>
+                                </div>
+                                <button type="submit" class="bg-[#1DA1F2] hover:bg-[#1a91da] text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full button-animate">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-[#192734] rounded-xl p-6 border border-[#38444d]">
+                            <h3 class="text-[#FFFFFF] text-xl font-bold mb-6">Contact Information</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2] mr-4">
+                                        <i class="fas fa-envelope text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-[#8899A6]">Email</p>
+                                        <a href="mailto:dayanandrei14@gmail.com" class="text-[#FFFFFF] hover:text-[#1DA1F2] transition duration-300">dayanandrei14@gmail.com</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2] mr-4">
+                                        <i class="fas fa-phone text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-[#8899A6]">Phone</p>
+                                        <a href="tel:09763657049" class="text-[#FFFFFF] hover:text-[#1DA1F2] transition duration-300">09763657049</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2] mr-4">
+                                        <i class="fas fa-map-marker-alt text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-[#8899A6]">Location</p>
+                                        <p class="text-[#FFFFFF]">Calamba, Philippines</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Social Media Links -->
+<div class="mt-8">
+    <h4 class="text-[#FFFFFF] font-bold mb-4">Connect With Me</h4>
+    <div class="flex space-x-4">
+        <a href="#" class="w-10 h-10 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white transition duration-300 social-icon-animate">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white transition duration-300 social-icon-animate">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white transition duration-300 social-icon-animate">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white transition duration-300 social-icon-animate">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- Footer Section -->
+<footer class="py-10 bg-[#192734] border-t border-[#38444d]">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<!-- Copyright -->
+<div class="mb-6 md:mb-0 text-center md:text-left">
+    <p class="text-[#8899A6]">© 2025 Jowell Andrei Noma Dayan. All rights reserved.</p>
+    <p class="text-[#8899A6] mt-2">Last updated: June 21, 2025</p>
+</div>
+
+<!-- Quick Links -->
+<div class="flex flex-wrap justify-center gap-4">
+    <a href="#home" class="text-[#8899A6] hover:text-[#1DA1F2] transition duration-300">Home</a>
+    <a href="#about" class="text-[#8899A6] hover:text-[#1DA1F2] transition duration-300">About</a>
+    <a href="#projects" class="text-[#8899A6] hover:text-[#1DA1F2] transition duration-300">Projects</a>
+    <a href="#contact" class="text-[#8899A6] hover:text-[#1DA1F2] transition duration-300">Contact</a>
+</div>
+</div>
+
+<!-- Back to Top Button -->
+<div class="flex justify-center mt-8">
+<a href="#home" class="back-to-top w-12 h-12 rounded-full bg-[#1DA1F2] text-white flex items-center justify-center hover:bg-[#1a91da] transition duration-300 animate__animated animate__bounceIn" data-aos="fade-up">
+    <i class="fas fa-chevron-up"></i>
+</a>
+</div>
+</div>
+</footer>
+
+<!-- Toast Container for Notifications -->
+<div class="toast-container fixed bottom-4 right-4 z-50"></div>
+
+<!-- AOS JS Library -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Custom JS -->
+<script src="../JSFILES/script.js"></script>
 </body>
 </html>
