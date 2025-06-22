@@ -517,10 +517,16 @@
 
 
 
-  /* Swiper custom styles */
+ /* Swiper custom styles - consolidated and cleaned up */
 .swiper {
     width: 100%;
     height: 100%;
+}
+
+/* Fixed height container for sliders */
+.project-card .bg-tweet-dark  {
+    height: 240px; /* Consistent fixed height for all sliders */
+    overflow: hidden;
 }
 
 .swiper-slide {
@@ -529,47 +535,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-    font-size: 1.2rem !important;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    background-color: rgba(29, 161, 242, 0.1);
-    border-radius: 50%;
-    padding: 1.5rem;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    background-color: rgba(29, 161, 242, 0.2);
-}
-
-.swiper-pagination-bullet {
-    background: #1DA1F2 !important;
-}
-
-/* Swiper custom styles */
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    text-align: center;
-    background: #192734;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 
 .swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.3s ease;
 }
 
@@ -606,9 +579,57 @@
     opacity: 1;
     transform: scale(1.2);
 }
+/* Add to your existing CSS */
+.project-card > div {
+    display: flex;
+    flex-direction: column;
+    min-height: 650px; /* Set a consistent minimum height */
+}
+
+/* Force project details section to push buttons to bottom */
+.project-card .project-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Add to your existing CSS */
+.swiper {
+    width: 100%;
+    aspect-ratio: 16/9; /* This ensures a consistent aspect ratio */
+    max-height: 320px; /* This corresponds to your h-80 class */
+  }
+  
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will ensure the image covers the area without distortion */
+    object-position: center; /* Center the image within the container */
+  }
+
+  /* Add these to your CSS file */
+.project-card .bg-\[\#192734\] {
+    height: 240px !important;
+    min-height: 240px !important;
+}
 
 .project-card .swiper {
-    height: 300px; /* Set consistent height */
+    height: 100% !important;
+    width: 100% !important;
 }
-.project-card .content {
-        min-height: 200px;}
+
+.project-card .swiper-slide img {
+    object-fit: cover !important;
+    height: 100% !important;
+    width: 100% !important;
+}

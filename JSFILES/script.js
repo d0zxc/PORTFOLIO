@@ -538,25 +538,24 @@ window.addEventListener('load', function() {
 
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize Swiper for Project 1
     const swiper1 = new Swiper(".projectSwiper1", {
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 0,
         loop: true,
         autoplay: {
             delay: 3500,
             disableOnInteraction: false,
         },
         pagination: {
-            el: ".swiper-pagination",
+            el: ".swiper-pagination-1", // Use unique selector
             clickable: true,
             dynamicBullets: true,
         },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next-1", // Use unique selector
+            prevEl: ".swiper-button-prev-1", // Use unique selector
         },
         effect: "fade",
         fadeEffect: {
@@ -567,24 +566,42 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize Swiper for Project 2
     const swiper2 = new Swiper(".projectSwiper2", {
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 0,
         loop: true,
         autoplay: {
             delay: 3500,
             disableOnInteraction: false,
         },
         pagination: {
-            el: ".swiper-pagination",
+            el: ".swiper-pagination-2", // Use unique selector
             clickable: true,
             dynamicBullets: true,
         },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next-2", // Use unique selector
+            prevEl: ".swiper-button-prev-2", // Use unique selector
         },
         effect: "fade",
         fadeEffect: {
             crossFade: true
         }
     });
+});
+// Add this to ensure sliders maintain proportions after refresh
+window.addEventListener('load', function() {
+    // Force refresh the Swiper instances
+    if (typeof swiper1 !== 'undefined' && swiper1) {
+        swiper1.update();
+    }
+    
+    if (typeof swiper2 !== 'undefined' && swiper2) {
+        swiper2.update();
+    }
+    
+    // Force consistent heights with a slight delay
+    setTimeout(function() {
+        document.querySelectorAll('.project-card .bg-\\[\\#192734\\]').forEach(function(el) {
+            el.style.height = '240px';
+        });
+    }, 100);
 });
