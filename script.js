@@ -205,14 +205,14 @@ function initTypingAnimation() {
                     observer.unobserve(entry.target);
                 }
             });
-        }, {threshold: 0.2});
+        }, {threshold: 0.1});
         
         observer.observe(element);
     });
     
     function typeText(element, text) {
         let i = 0;
-        const typingSpeed = 30; // milliseconds per character
+        const typingSpeed = 20; // milliseconds per character
         
         function type() {
             if (i < text.length) {
