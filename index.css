@@ -1,639 +1,68 @@
-/* Twitter/X-Inspired Theme with Animations */
+/* ==== Twitter/X-Inspired Theme with Cleaned Styles ==== */
 
-/* Base Styles */
 :root {
-    --twitter-black: #15202B;
-    --twitter-dark: #192734;
-    --twitter-border: #38444d;
-    --twitter-blue: #1DA1F2;
-    --twitter-text: #FFFFFF;
-    --twitter-light-text: #8899A6;
-    --twitter-green: #17BF63;
-    --twitter-red: #E0245E;
-  }
-  
-  body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.5;
-    background-color: var(--twitter-black);
-    color: var(--twitter-text);
-    overflow-x: hidden;
-  }
-  
-  /* Custom Scrollbar */
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: var(--twitter-black);
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: var(--twitter-border);
-    border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--twitter-blue);
-  }
-  
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-  
-  /* Make the site scroll smoothly */
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  /* Link and Button Styles */
-  a {
-    text-decoration: none;
-    color: var(--twitter-blue);
-    transition: color 0.3s ease;
-  }
-  
-  a:hover {
-    color: var(--twitter-text);
-  }
-  
-  button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-  }
-  
-  /* Twitter/X Style Active Tab */
-  .tab-active {
-    color: var(--twitter-text) !important;
-    font-weight: 500;
-    border-bottom: 4px solid var(--twitter-blue) !important;
-  }
-  
-  /* Skill Badge Styles */
-  .skill-badge {
-    background-color: rgba(29, 161, 242, 0.2);
-    color: var(--twitter-blue);
-    padding: 0.5rem 1rem;
-    border-radius: 9999px;
-    font-size: 0.875rem;
-    display: inline-block;
-    transition: all 0.3s ease;
-  }
-  
-  .skill-badge:hover {
-    background-color: rgba(29, 161, 242, 0.4);
-    transform: translateY(-2px);
-  }
-  
-  /* Twitter Card Hover Effect */
-  .project-card, .certificate-card, .skill-card, .org-skill-card, .education-card, .experience-card {
-    transition: all 0.3s ease;
-  }
-  
-  .project-card:hover, .certificate-card:hover, .skill-card:hover, .org-skill-card:hover, .education-card:hover, .experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Profile Image Container */
-  .profile-image-container {
-    position: relative;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .profile-image-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(29, 161, 242, 0.5);
-  }
-  
-  .profile-image-container img {
-    aspect-ratio: 1/1;
-    object-fit: cover;
-  }
-  
-  /* Button Animation */
-  .button-animate {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .button-animate:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .button-animate:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Navigation Item Animation */
-  .nav-item-animate {
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  
-  .nav-item-animate:hover {
-    transform: translateY(-3px);
-  }
-  
-  /* Banner Pattern Animation */
-  .banner-pattern-animate {
-    animation: slideInRight 1.2s ease-out forwards;
-  }
-  
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 0.1;
-      transform: translateX(0);
-    }
-  }
-  
-  /* Tweet Action Animation */
-  .tweet-action-animate {
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  
-  .tweet-action-animate:hover {
-    animation: bounce 0.8s;
-  }
-  
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
-  }
-  
-  /* Heart Animation */
-  @keyframes heartBeat {
-    0% { transform: scale(1); }
-    14% { transform: scale(1.3); }
-    28% { transform: scale(1); }
-    42% { transform: scale(1.3); }
-    70% { transform: scale(1); }
-  }
-  
-  .heart-animate.active {
-    animation: heartBeat 0.8s ease-in-out;
-    color: var(--twitter-red) !important;
-  }
-  
-  /* Social Icon Animation */
-  .social-icon-animate {
-    transition: all 0.3s ease;
-  }
-  
-  .social-icon-animate:hover {
-    transform: translateY(-5px) rotate(10deg);
-  }
-  
-  /* Progress Bar Animation */
-  .progress-bar {
-    transition: width 1.5s ease;
-  }
-  
-  /* Animate width on scroll */
-  [data-aos="width"] {
-    width: 0%;
-    transition-property: width;
-  }
-  
-  [data-aos="width"].aos-animate {
-    width: attr(data-width);
-  }
-  
-  /* Typing Animation for Bio */
-  .typing-animation {
-    border-right: 2px solid var(--twitter-blue);
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: 
-      typing 3.5s steps(40, end) forwards,
-      blink-caret 0.75s step-end infinite;
-  }
-  
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--twitter-blue) }
-  }
-  
-  /* Staggered Animation for Multiple Elements */
-  .stagger-animate {
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-  }
-  
-  .stagger-animate:nth-child(1) { animation-delay: 0.1s; }
-  .stagger-animate:nth-child(2) { animation-delay: 0.2s; }
-  .stagger-animate:nth-child(3) { animation-delay: 0.3s; }
-  .stagger-animate:nth-child(4) { animation-delay: 0.4s; }
-  .stagger-animate:nth-child(5) { animation-delay: 0.5s; }
-  
-  /* Loading Spinner */
-  .loading-spinner {
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    border: 0.25rem solid rgba(29, 161, 242, 0.2);
-    border-top-color: var(--twitter-blue);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-  
-  /* Mobile Menu Animation */
-  @keyframes slideDown {
-    from { 
-      opacity: 0; 
-      transform: translateY(-10px); 
-    }
-    to { 
-      opacity: 1; 
-      transform: translateY(0); 
-    }
-  }
-  
-  #mobile-menu.show {
-    display: block;
-    animation: slideDown 0.3s forwards;
-  }
-  
-  /* Timeline Styling */
-  .timeline {
-    position: relative;
-    padding: 2rem 0;
-  }
-  
-  .timeline-item {
-    position: relative;
-    margin-bottom: 2rem;
-  }
-  
-  /* Animated Number Counter */
-  .animate-number {
-    display: inline-block;
-  }
-  
-  /* Form Input Focus Effects */
-  input:focus, textarea:focus {
-    box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.3);
-    border-color: var(--twitter-blue) !important;
-  }
-  
-  /* Animated Pulse for Icons */
-  .pulse-animate {
-    animation: pulse 2s infinite;
-  }
-  
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-  }
-  
-  /* Scroll Animation */
-  .scroll-animate {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  
-  .scroll-animate.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Fade In Animation */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  /* Fade In Right Animation */
-  @keyframes fadeInRight {
-    from { opacity: 0; transform: translateX(20px); }
-    to { opacity: 1; transform: translateX(0); }
-  }
-  
-  /* Fade In Left Animation */
-  @keyframes fadeInLeft {
-    from { opacity: 0; transform: translateX(-20px); }
-    to { opacity: 1; transform: translateX(0); }
-  }
-  
-  /* Fade In Up Animation */
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  /* Zoom In Animation */
-  @keyframes zoomIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
-  }
-  
-  /* Scale In Animation */
-  @keyframes scaleIn {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-  }
-  
-  /* Wave Animation for Greeting */
-  .wave-animate {
-    display: inline-block;
-    animation: wave 2.5s infinite;
-    transform-origin: 70% 70%;
-  }
-  
-  @keyframes wave {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(14deg); }
-    20% { transform: rotate(-8deg); }
-    30% { transform: rotate(14deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-    60% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
-  }
-  
-  /* Slide In Animation */
-  @keyframes slideIn {
-    from { transform: translateY(50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-  
-  /* Ripple Effect for Buttons */
-  .ripple-button {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .ripple-button:after {
-    content: "";
-    background: rgba(255, 255, 255, 0.3);
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    opacity: 0;
-    transition: all 0.5s;
-    transform: scale(0);
-  }
-  
-  .ripple-button:active:after {
-    transform: scale(3);
-    opacity: 0;
-    transition: 0s;
-  }
-  
-  /* Hover Glow Effect */
-  .hover-glow {
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .hover-glow:hover {
-    box-shadow: 0 0 15px rgba(29, 161, 242, 0.7);
-  }
-  
-  /* Float Animation */
-  .float-animate {
-    animation: float 3s ease-in-out infinite;
-  }
-  
-  @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-  }
-  
-  /* Shake Animation */
-  .shake-animate:hover {
-    animation: shake 0.5s ease-in-out;
-  }
-  
-  @keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
-  }
-  
-  /* Light Trail Effect */
-  .light-trail {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .light-trail:after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-      to bottom right,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.2) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    transform: rotate(45deg);
-    animation: moveLight 3s infinite;
-  }
-  
-  @keyframes moveLight {
-    0% { transform: translateX(-100%) rotate(45deg); }
-    100% { transform: translateX(100%) rotate(45deg); }
-  }
-  
-  /* Media Queries */
-  @media (max-width: 768px) {
-    .profile-image-container img {
-      width: 6rem;
-      height: 6rem;
-    }
-    
-    h1 {
-      font-size: 1.5rem !important;
-    }
-    
-    h2 {
-      font-size: 1.25rem !important;
-    }
-    
-    .timeline:before {
-      left: 20px;
-    }
-    
-    .typing-animation {
-      white-space: normal;
-      border-right: none;
-      width: 100%;
-      animation: fadeIn 1s ease;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .profile-image-container img {
-      width: 5rem;
-      height: 5rem;
-    }
-    
-    .skill-badge {
-      margin-bottom: 0.5rem;
-    }
-    
-    .container {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  }
-
-
-
-
- /* Swiper custom styles - consolidated and cleaned up */
-.swiper {
-    width: 100%;
-    height: 100%;
+  --twitter-black: #15202B;
+  --twitter-dark: #192734;
+  --twitter-border: #38444d;
+  --twitter-blue: #1DA1F2;
+  --twitter-text: #FFFFFF;
+  --twitter-light-text: #8899A6;
+  --twitter-green: #17BF63;
+  --twitter-red: #E0245E;
 }
 
-/* Fixed height container for sliders */
-.project-card .bg-tweet-dark  {
-    height: 240px; /* Consistent fixed height for all sliders */
-    overflow: hidden;
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  background-color: var(--twitter-black);
+  color: var(--twitter-text);
+  overflow-x: hidden;
 }
 
-.swiper-slide {
-    text-align: center;
-    background: #192734;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+html {
+  scroll-behavior: smooth;
 }
 
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: transform 0.3s ease;
+a {
+  text-decoration: none;
+  color: var(--twitter-blue);
+  transition: color 0.3s ease;
 }
 
-.swiper-slide:hover img {
-    transform: scale(1.05);
+a:hover {
+  color: var(--twitter-text);
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    background-color: rgba(29, 161, 242, 0.1);
-    border-radius: 50%;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    background-color: rgba(29, 161, 242, 0.2);
-    transform: scale(1.1);
+/* Active Tab */
+.tab-active {
+  color: var(--twitter-text) !important;
+  font-weight: 500;
+  border-bottom: 4px solid var(--twitter-blue) !important;
 }
 
-.swiper-button-next:after,
-.swiper-button-prev:after {
-    font-size: 1.2rem !important;
-    font-weight: bold;
+/* Skill Badge */
+.skill-badge {
+  background-color: rgba(29, 161, 242, 0.2);
+  color: var(--twitter-blue);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
 
-.swiper-pagination-bullet {
-    background: #1DA1F2 !important;
-    opacity: 0.5;
+.skill-badge:hover {
+  background-color: rgba(29, 161, 242, 0.4);
+  transform: translateY(-2px);
 }
 
-.swiper-pagination-bullet-active {
-    opacity: 1;
-    transform: scale(1.2);
-}
-/* Add to your existing CSS */
-.project-card > div {
-    display: flex;
-    flex-direction: column;
-    min-height: 650px; /* Set a consistent minimum height */
-}
-
-/* Force project details section to push buttons to bottom */
-.project-card .project-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-/* Add to your existing CSS */
-.swiper {
-    width: 100%;
-    aspect-ratio: 16/9; /* This ensures a consistent aspect ratio */
-    max-height: 320px; /* This corresponds to your h-80 class */
-  }
-  
-  .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This will ensure the image covers the area without distortion */
-    object-position: center; /* Center the image within the container */
-  }
-
-  /* Add these to your CSS file */
-.project-card .bg-\[\#192734\] {
-    height: 240px !important;
-    min-height: 240px !important;
-}
-
-.project-card .swiper {
-    height: 100% !important;
-    width: 100% !important;
-}
-
-.project-card .swiper-slide img {
-    object-fit: cover !important;
-    height: 100% !important;
-    width: 100% !important;
-}
-
+/* Project Tags */
 .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -655,4 +84,125 @@
 .project-tag:hover {
   background-color: rgba(29, 161, 242, 0.4);
   transform: translateY(-2px);
+}
+
+/* Project Card Layout Fix */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.project-card .project-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Swiper Fix */
+.project-card .swiper {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide:hover img {
+  transform: scale(1.05);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(29, 161, 242, 0.1);
+  border-radius: 50%;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(29, 161, 242, 0.2);
+  transform: scale(1.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 1.2rem !important;
+  font-weight: bold;
+}
+
+.swiper-pagination-bullet {
+  background: #1DA1F2 !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Responsive Image */
+.profile-image-container img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--twitter-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--twitter-border);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--twitter-blue);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .profile-image-container img {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-image-container img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .skill-badge {
+    margin-bottom: 0.5rem;
+  }
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

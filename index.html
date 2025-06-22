@@ -457,38 +457,36 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-12 bg-[#192734]">
-            <div class="container mx-auto px-4">
-                <h2 class="text-[#FFFFFF] text-2xl font-bold mb-8 flex items-center" data-aos="fade-right">
-                    <i class="fas fa-project-diagram text-[#1DA1F2] mr-3"></i>Projects
-                </h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Project 1 -->
-                    <div class="project-card tweet-animate h-full" data-aos="fade-up" data-aos-delay="100">
-                        <div class="bg-[#15202B] rounded-xl overflow-hidden border border-[#38444d] hover:border-[#1DA1F2] transition duration-300 h-full flex flex-col">
-                            <!-- Project Header -->
-                            <div class="p-5 flex shrink-0">
-                                <img src="./Assets/profile.JPG" alt="Jowell Andrei Noma Dayan" class="w-12 h-12 rounded-full object-cover">
-                                <div class="ml-3">
-                                    <div class="flex items-center">
-                                        <span class="font-bold text-[#FFFFFF]">Jowell Andrei Noma Dayan</span>
-                                        <span class="text-[#8899A6] mx-1">@AndreiDayan</span>
-                                        <span class="text-[#8899A6]">· June 2023</span>
-                                    </div>
-                                    <p class="text-[#FFFFFF] mt-2">
-                                        Just completed our Thesis Capstone: CPAce - An Adaptive Learning CPA Board Exam Review Application using ML algorithms! 🚀 #MachineLearning #Python #DataScience
-                                    </p>
-                                </div>
-                            </div>
-                            
-                           <!-- Project Image/Icon -->
-                           <div class="bg-[#192734] overflow-hidden shrink-0">
-                            <div class="swiper projectSwiper1 aspect-ratio-16/9 w-full">
-
-                                        <div class="swiper-wrapper">
-                                            <!-- 6 pictures for each project -->
-                                            <div class="swiper-slide">
+<section id="projects" class="py-12 bg-[#192734]">
+    <div class="container mx-auto px-4">
+      <h2 class="text-[#FFFFFF] text-2xl font-bold mb-8 flex items-center" data-aos="fade-right">
+        <i class="fas fa-project-diagram text-[#1DA1F2] mr-3"></i>Projects
+      </h2>
+  
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Project Card Template -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-[#15202B] rounded-xl overflow-hidden border border-[#38444d] hover:border-[#1DA1F2] transition duration-300">
+  
+            <!-- Project Header -->
+            <div class="p-5 flex">
+              <img src="../Assets/profile.JPG" alt="Author" class="w-12 h-12 rounded-full object-cover">
+              <div class="ml-3">
+                <div class="flex items-center">
+                  <span class="font-bold text-[#FFFFFF]">Jowell Andrei Noma Dayan</span>
+                  <span class="text-[#8899A6] mx-1">@AndreiDayan</span>
+                  <span class="text-[#8899A6]">· June 2023</span>
+                </div>
+                <p class="text-[#FFFFFF] mt-2">
+                  Just completed our Thesis Capstone: CPAce - An Adaptive Learning CPA Board Exam Review Application using ML algorithms! 🚀
+                </p>
+              </div>
+            </div>
+  
+            <!-- Swiper Slider -->
+            <div class="swiper projectSwiper1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                                                 <img src="./Assets/Picture1.png" alt="CPAce Dashboard" class="w-full h-full object-cover">
                                             </div>
                                             <div class="swiper-slide">
@@ -507,134 +505,105 @@
                                                 <img src="./Assets/Picture6.png" alt="CPAce Results" class="w-full h-full object-cover">
                                             </div>
                                         </div>
-                                        <!-- Add navigation arrows -->
-                                        <div class="swiper-button-next !text-[#1DA1F2] !w-8 !h-8 !right-4"></div>
-                                        <div class="swiper-button-prev !text-[#1DA1F2] !w-8 !h-8 !left-4"></div>
-                                        <!-- Pagination dots - Adjusted positioning -->
-                                        <div class="swiper-pagination !bottom-4"></div>
-                                    </div>
-                                </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-pagination"></div>
+                                      </div>
                             
                             <!-- Project Details -->
-                            <div class="p-5 flex flex-col flex-1 justify-between">
-                                <h3 class="text-[#FFFFFF] text-xl font-bold mb-2">CPAce: An Adaptive Learning CPA Board Exam Review Application</h3>
-                                <p class="text-[#8899A6] mb-4">Using Random Forest and Hybrid Method Algorithms for Colegio de San Juan de Letran Calamba</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">Machine Learning</span>
-                                    <span class="project-tag">Python</span>
-                                    <span class="project-tag">Data Science</span>
-                                </div>
-                                
-                                
-                                <!-- Project Actions -->
-                                <div class="flex items-center justify-between text-[#8899A6] mt-auto">
-                                    <button class="flex items-center space-x-3 hover:text-[#1DA1F2] transition duration-300 tweet-action-animate">
-                                        <i class="far fa-comment text-lg"></i>
-                                        <span class="text-sm">32</span>
-                                    </button>
-                                    <button class="flex items-center space-x-3 hover:text-[#17BF63] transition duration-300 tweet-action-animate">
-                                        <i class="fas fa-retweet text-lg"></i>
-                                        <span class="text-sm">64</span>
-                                    </button>
-                                    <button class="flex items-center space-x-3 hover:text-[#E0245E] transition duration-300 heart-btn tweet-action-animate">
-                                        <i class="far fa-heart text-lg"></i>
-                                        <span class="text-sm">128</span>
-                                    </button>
-                                    <button class="flex items-center space-x-3 hover:text-[#1DA1F2] transition duration-300 tweet-action-animate">
-                                        <i class="far fa-share-square text-lg"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <div class="p-5 project-details">
+            <h3 class="text-[#FFFFFF] text-xl font-bold mb-2">CPAce: Adaptive CPA Board Review App</h3>
+            <p class="text-[#8899A6] mb-4">Using Random Forest and Hybrid Method Algorithms for Letran Calamba</p>
 
-                    <!-- Project 2 -->
-                    <div class="project-card tweet-animate h-full" data-aos="fade-up" data-aos-delay="100">
-                        <div class="bg-[#15202B] rounded-xl overflow-hidden border border-[#38444d] hover:border-[#1DA1F2] transition duration-300 h-full flex flex-col">
-                            <!-- Project Header -->
-                            <div class="p-5 flex shrink-0">
-                                <img src="./Assets/profile.JPG" alt="Jowell Andrei Noma Dayan" class="w-12 h-12 rounded-full object-cover">
-                                <div class="ml-3">
-                                    <div class="flex items-center">
-                                        <span class="font-bold text-[#FFFFFF]">Jowell Andrei Noma Dayan</span>
-                                        <span class="text-[#8899A6] mx-1">@AndreiDayan</span>
-                                        <span class="text-[#8899A6]">· March 2024</span>
-                                    </div>
-                                    <p class="text-[#FFFFFF] mt-2">
-                                        Excited to share my work on the Department of Education website for Santa Rosa City's School Governance division! 💻 #WebDevelopment #Education 
-                                    </p>
-                                </div>
-                            </div>
-                            
-                           <!-- Project Image/Icon -->
-                           <div class="bg-[#192734] overflow-hidden shrink-0">
-                            <div class="swiper projectSwiper2 aspect-ratio-16/9 w-full">
-
-                                <div class="swiper-wrapper">
-                                    <!-- 6 pictures for each project -->
-                                    <div class="swiper-slide">
-                                        <img src="./Assets/sdo1.png" alt="CPAce Dashboard" class="w-full h-full object-cover">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./Assets/sdo2.png" alt="CPAce Learning Module" class="w-full h-full object-cover">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./Assets/sdo3.png" alt="CPAce Progress Tracking" class="w-full h-full object-cover">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./Assets/sdo4.png" alt="CPAce Analytics" class="w-full h-full object-cover">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./Assets/sdo5.png" alt="CPAce Question Bank" class="w-full h-full object-cover">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./Assets/sdo6.png" alt="CPAce Results" class="w-full h-full object-cover">
-                                    </div>
-                                </div>
-                                <!-- Add navigation arrows -->
-                                <div class="swiper-button-next !text-[#1DA1F2] !w-8 !h-8 !right-4"></div>
-                                <div class="swiper-button-prev !text-[#1DA1F2] !w-8 !h-8 !left-4"></div>
-                                <!-- Pagination dots - Adjusted positioning -->
-                                <div class="swiper-pagination !bottom-4"></div>
-                            </div>
-                        </div>
-                            
-                            <!-- Project Details -->
-                            <div class="p-5 flex flex-col flex-1 justify-between">
-                                <h3 class="text-[#FFFFFF] text-xl font-bold mb-2">Department of Education - Schools Division Office of Santa Rosa City</h3>
-                                <p class="text-[#8899A6] mb-4">School Governance and Operations Division Official Website for  </p>
-                                <div class="project-tags">
-                                    <span class="project-tag">Web Development</span>
-                                    <span class="project-tag">PHP</span>
-                                    <span class="project-tag">JavaScript</span>
-                                </div>
-                                
-                                
-                                <!-- Project Actions -->
-                                                            
-                                <div class="flex items-center justify-between text-[#8899A6] mt-auto">
-                                    <button class="flex items-center space-x-3 hover:text-[#1DA1F2] transition duration-300 tweet-action-animate">
-                                        <i class="far fa-comment text-lg"></i>
-                                        <span class="text-sm">32</span>
-                                    </button>
-                                    <button class="flex items-center space-x-3 hover:text-[#17BF63] transition duration-300 tweet-action-animate">
-                                        <i class="fas fa-retweet text-lg"></i>
-                                        <span class="text-sm">64</span>
-                                    </button>
-                                    <button class="flex items-center space-x-3 hover:text-[#E0245E] transition duration-300 heart-btn tweet-action-animate">
-                                        <i class="far fa-heart text-lg"></i>
-                                        <span class="text-sm">128</span>
-                                    </button>
-                                    <button class="flex items-center space-x-3 hover:text-[#1DA1F2] transition duration-300 tweet-action-animate">
-                                        <i class="far fa-share-square text-lg"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="project-tags">
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Data Science</span>
             </div>
-        </section>
+
+            <div class="flex items-center justify-between text-[#8899A6] mt-auto">
+              <button class="flex items-center space-x-3 hover:text-[#1DA1F2] tweet-action-animate">
+                <i class="far fa-comment text-lg"></i>
+                <span class="text-sm">32</span>
+              </button>
+              <button class="flex items-center space-x-3 hover:text-[#17BF63] tweet-action-animate">
+                <i class="fas fa-retweet text-lg"></i>
+                <span class="text-sm">64</span>
+              </button>
+              <button class="flex items-center space-x-3 hover:text-[#E0245E] heart-btn tweet-action-animate">
+                <i class="far fa-heart text-lg"></i>
+                <span class="text-sm">128</span>
+              </button>
+              <button class="flex items-center space-x-3 hover:text-[#1DA1F2] tweet-action-animate">
+                <i class="far fa-share-square text-lg"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+                   <!-- Project 2 -->
+      <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="bg-[#15202B] rounded-xl overflow-hidden border border-[#38444d] hover:border-[#1DA1F2] transition duration-300 flex flex-col">
+          <div class="p-5 flex">
+            <img src="./Assets/profile.JPG" alt="Jowell Andrei Noma Dayan" class="w-12 h-12 rounded-full object-cover">
+            <div class="ml-3">
+              <div class="flex items-center">
+                <span class="font-bold text-[#FFFFFF]">Jowell Andrei Noma Dayan</span>
+                <span class="text-[#8899A6] mx-1">@AndreiDayan</span>
+                <span class="text-[#8899A6]">· March 2024</span>
+              </div>
+              <p class="text-[#FFFFFF] mt-2">
+                Excited to share my work on the Department of Education website for Santa Rosa City's School Governance division! 💻 #WebDevelopment #Education
+              </p>
+            </div>
+          </div>
+          <div class="swiper projectSwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./Assets/sdo1.png" alt="SDO Screenshot 1"></div>
+              <div class="swiper-slide"><img src="./Assets/sdo2.png" alt="SDO Screenshot 2"></div>
+              <div class="swiper-slide"><img src="./Assets/sdo3.png" alt="SDO Screenshot 3"></div>
+              <div class="swiper-slide"><img src="./Assets/sdo4.png" alt="SDO Screenshot 4"></div>
+              <div class="swiper-slide"><img src="./Assets/sdo5.png" alt="SDO Screenshot 5"></div>
+              <div class="swiper-slide"><img src="./Assets/sdo6.png" alt="SDO Screenshot 6"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="p-5 project-details">
+            <h3 class="text-[#FFFFFF] text-xl font-bold mb-2">Department of Education - Schools Division Office of Santa Rosa City</h3>
+            <p class="text-[#8899A6] mb-4">School Governance and Operations Division Official Website</p>
+            <div class="project-tags">
+              <span class="project-tag">Web Development</span>
+              <span class="project-tag">PHP</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <div class="flex items-center justify-between text-[#8899A6] mt-auto">
+              <button class="flex items-center space-x-3 hover:text-[#1DA1F2] tweet-action-animate">
+                <i class="far fa-comment text-lg"></i>
+                <span class="text-sm">32</span>
+              </button>
+              <button class="flex items-center space-x-3 hover:text-[#17BF63] tweet-action-animate">
+                <i class="fas fa-retweet text-lg"></i>
+                <span class="text-sm">64</span>
+              </button>
+              <button class="flex items-center space-x-3 hover:text-[#E0245E] heart-btn tweet-action-animate">
+                <i class="far fa-heart text-lg"></i>
+                <span class="text-sm">128</span>
+              </button>
+              <button class="flex items-center space-x-3 hover:text-[#1DA1F2] tweet-action-animate">
+                <i class="far fa-share-square text-lg"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
         <!-- Experience Section -->
         <section id="experience" class="py-12 bg-[#15202B]">
