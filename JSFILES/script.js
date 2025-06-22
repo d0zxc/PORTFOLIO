@@ -605,3 +605,8 @@ window.addEventListener('load', function() {
         });
     }, 100);
 });
+
+setTimeout(() => {
+    swiper.update(); // Force recalculation after layout shift
+  }, 300);
+  
