@@ -212,7 +212,7 @@ function initTypingAnimation() {
     
     function typeText(element, text) {
         let i = 0;
-        const typingSpeed = 20; // milliseconds per character
+        const typingSpeed = 17; // milliseconds per character
         
         function type() {
             if (i < text.length) {
