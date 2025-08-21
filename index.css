@@ -1,5 +1,28 @@
-/* ==== Twitter/X-Inspired Theme with Cleaned Styles ==== */
+/* ==== CSS Reset (Minimal, Tailwind-Friendly) ==== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+html, body {
+  height: 100%;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font: inherit;
+  background: none;
+}
+
+/* ==== Twitter/X-Inspired Theme with Cleaned Styles ==== */
 :root {
   --twitter-black: #15202B;
   --twitter-dark: #192734;
@@ -28,15 +51,8 @@ a {
   color: var(--twitter-blue);
   transition: color 0.3s ease;
 }
-
 a:hover {
   color: var(--twitter-text);
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
 }
 
 /* Active Tab */
@@ -71,7 +87,7 @@ button {
 .project-tag {
   padding: 0.25rem 0.75rem;
   background-color: rgba(29, 161, 242, 0.2);
-  color: var(--twitter-blue);
+  color: #1DA1F2;
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
@@ -83,7 +99,11 @@ button {
   transform: translateY(-2px);
 }
 
-/* Project Card Layout */
+/* Equal height grid rows */
+.grid {
+  display: grid;
+  align-items: stretch;
+}
 .project-card {
   display: flex;
   flex-direction: column;
@@ -96,24 +116,15 @@ button {
   justify-content: space-between;
 }
 
-/* Swiper scaling */
+/* Locked media container height */
 .project-card .swiper {
   width: 100%;
-  height: clamp(200px, 28vw, 320px);
+  height: 320px; /* Fixed height for all image/video containers */
   overflow: hidden;
   position: relative;
 }
 
-/* Fallback for browsers without clamp() */
-@supports not (height: clamp(200px, 28vw, 320px)) {
-  .project-card .swiper {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    max-height: 320px;
-  }
-}
-
-/* Fallback for browsers without aspect-ratio */
+/* Fallback for browsers without aspect-ratio support */
 @supports not (aspect-ratio: 16/9) {
   .project-card .swiper {
     height: 0;
@@ -201,12 +212,18 @@ button {
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
+  .project-card .swiper {
+    height: 240px; /* Smaller fixed height for tablet */
+  }
   .profile-image-container img {
     width: 6rem;
     height: 6rem;
   }
 }
 @media (max-width: 480px) {
+  .project-card .swiper {
+    height: 200px; /* Smaller fixed height for mobile */
+  }
   .profile-image-container img {
     width: 5rem;
     height: 5rem;
